@@ -9,15 +9,15 @@ Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fu
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Larissa Cardoso Soares 
+- Matricula: 902511 
+- Proposta de projeto escolhida: Pessoas e Produções 
+- Breve descrição sobre seu projeto: O projeto fala sobre a escritora Ali Hazelwood e suas obras.
 
 **Print da tela com a implementação**
 
-<< Coloque aqui uma breve explicação da implementação feita nessa etapa>>
+A página exibe um gráfico de barras mostrando a quantidade de livros por gênero.
 
-<<  COLOQUE A IMAGEM TELA 1 AQUI >>
+![Tela 1](image.png)
 
-<<  COLOQUE A IMAGEM TELA 2 AQUI >>
+![Tela 2](image-1.png)

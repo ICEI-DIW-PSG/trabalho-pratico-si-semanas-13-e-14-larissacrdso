@@ -1,18 +1,76 @@
 {
-  "usuarios": [
+  "livros": [
     {
-      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "titulo": "A Hipótese do Amor (Edição Atualizada)",
+      "autor": "Ali Hazelwood",
+      "ano": 2021,
+      "imagem": "hipotese.jpg",
+      "id": "1"
     },
     {
-      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "id": "2",
+      "titulo": "A Razão do Amor",
+      "autor": "Ali Hazelwood",
+      "imagemCard": "a razao.jpg",
+      "imagemCarrossel": "a-razao-carrossel.jpg",
+      "resumo": "Bee é uma neuroengenheira que precisa trabalhar ao lado de Levi, seu antigo rival acadêmico, e descobre que o amor também pode ser científico.",
+      "genero": "Romance",
+      "paginas": 400,
+      "lancamento": "2022",
+      "avaliacao": 4.7,
+      "personagens": [
+        {
+          "nome": "Bee Königswasser",
+          "imagem": "bee.jpg",
+          "descricao": "Neuroengenheira brilhante que acredita no poder das mulheres na ciência."
+        },
+        {
+          "nome": "Levi Ward",
+          "imagem": "levi.jpg",
+          "descricao": "Engenheiro espacial reservado que guarda sentimentos antigos por Bee."
+        }
+      ]
+    },
+    {
+      "id": "f45c",
+      "titulo": "ali",
+      "autor": "larissa",
+      "genero": "romance",
+      "resumo": "skshi",
+      "imagemCard": "a hipotese-png",
+      "imagemCarrossel": "",
+      "paginas": "360",
+      "lancamento": "2025"
+    },
+    {
+      "titulo": "Amor & Ciência",
+      "autor": "L. Cardoso",
+      "imagemCard": "amor.jpg",
+      "imagemCarrossel": "amor-carrossel.jpg",
+      "resumo": "Um romance entre algoritmos e emoções.",
+      "genero": "Ficção científica",
+      "paginas": 350,
+      "lancamento": "2025",
+      "avaliacao": 4.7,
+      "personagens": [
+        {
+          "nome": "Lia",
+          "imagem": "lia.jpg",
+          "descricao": "Pesquisadora curiosa e sonhadora."
+        },
+        {
+          "nome": "Noah",
+          "imagem": "noah.jpg",
+          "descricao": "Engenheiro que acredita no poder dos dados."
+        }
+      ],
+      "id": "3"
+    },
+    {
+      "id": "51e3",
+      "titulo": "Novo livro",
+      "ano": 2024,
+      "categoria": "Teste"
     }
   ]
 }

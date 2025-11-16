@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gráfico de Livros por Gênero</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #graficoContainer {
+      width: 80%;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quantidade de Livros por Gênero</h1>
+
+  <div id="graficoContainer">
+    <canvas id="graficoGeneros"></canvas>
+  </div>
+
+  <script>
+    async function carregarDados() {
+      try {
+        const response = await fetch("http://localhost:3000/livros");
+        const livros = await response.json();
+
+        // Contagem por gênero com padronização
+        const contagem = {};
+
+        livros.forEach(livro => {
+          let genero = livro.genero?.trim().toLowerCase() || "sem gênero";
+          contagem[genero] = (contagem[genero] || 0) + 1;
+        });
+
+        // Labels formatados bonitos
+        const labels = Object.keys(contagem).map(g =>
+          g.charAt(0).toUpperCase() + g.slice(1)
+        );
+
+        const valores = Object.values(contagem);
+
+        const ctx = document.getElementById("graficoGeneros").getContext("2d");
+
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: labels,
+            datasets: [{
+              label: "Quantidade de Livros",
+              data: valores,
+              backgroundColor: "#f7a8c9",  // Rosa claro
+              borderColor: "#d97aa7",      // Rosa mais forte
+              borderWidth: 2
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+      } catch (error) {
+        console.error("Erro ao carregar dados:", error);
+      }
+    }
+
+    carregarDados();
+  </script>
+</body>
+</html>
